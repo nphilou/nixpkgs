@@ -5,6 +5,7 @@
 , pytest
 , pytest-flake8
 , more-itertools
+, toml
 }:
 
 buildPythonPackage rec {
@@ -16,7 +17,7 @@ buildPythonPackage rec {
     sha256 = "c599e4d75c98f6798c509911d08a22e6c021d074469042177c8c86fb92eefd96";
   };
 
-  nativeBuildInputs = [ setuptools_scm ];
+  nativeBuildInputs = [ setuptools_scm toml ];
 
   propagatedBuildInputs = [ more-itertools ];
 
